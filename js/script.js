@@ -1,3 +1,5 @@
+import createProduct from "./ui/createProduct.js";
+
 const url = "https://fakestoreapi.com/products";
 
 async function fetchApi() {
@@ -5,7 +7,7 @@ async function fetchApi() {
     const response = await fetch(url);
     const data = await response.json();
 
-    console.log(data);
+    createProduct(data);
   } catch (error) {
     console.log(error);
   }
