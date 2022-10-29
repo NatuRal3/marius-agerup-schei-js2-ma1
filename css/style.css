@@ -1,0 +1,46 @@
+body{
+    background-color: #333;
+}
+
+.container{
+    max-width: 1200px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.result{
+    padding: 5px;
+    margin: 5px;
+    max-width: 200px;
+    color: #333;
+    background-color: azure;
+}
+
+.loading-bar {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    margin-left: 50%;
+}
+
+.loading-bar:after {
+    content: " ";
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border-radius: 50%;
+    border: 6px solid #333;
+    border-color: #333 transparent #333 transparent;
+    animation: loading 1.2s linear infinite;
+}
+
+@keyframes loading {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
