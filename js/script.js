@@ -1,6 +1,7 @@
 import createProduct from "./ui/createProduct.js";
 import searchProducts from "./ui/searchProducts.js";
 import { apiURL } from "./constant/api.js";
+import infoMessage from "./constant/infoMessage.js";
 
 async function fetchApi() {
   try {
@@ -10,7 +11,8 @@ async function fetchApi() {
     createProduct(data);
     searchProducts(data);
   } catch (error) {
-    console.log(error);
+    console.log("API Catch");
+    infoMessage("error", "Failed to get you the data. We are on it.");
   }
 }
 
