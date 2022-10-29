@@ -3,7 +3,7 @@ import searchProducts from "./ui/searchProducts.js";
 import { apiURL } from "./constant/api.js";
 import infoMessage from "./constant/infoMessage.js";
 
-async function fetchApi() {
+export async function fetchApi() {
   try {
     const response = await fetch(apiURL);
     const data = await response.json();

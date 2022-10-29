@@ -1,4 +1,5 @@
 import createProduct from "./createProduct.js";
+import { fetchApi } from "../script.js";
 
 export default function searchProducts(data) {
   const searchMaxPrice = document.querySelector("input#max-price");
@@ -10,6 +11,9 @@ export default function searchProducts(data) {
     const maxPriceData = data.filter(function (item) {
       if (item.price <= maxPriceInput) {
         return true;
+      }
+      if (!item.price) {
+        fetchApi();
       }
     });
     createProduct(maxPriceData);
