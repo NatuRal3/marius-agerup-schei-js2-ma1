@@ -1,11 +1,10 @@
 import createProduct from "./ui/createProduct.js";
 import searchProducts from "./ui/searchProducts.js";
-
-const url = "https://fakestoreapi.com/products";
+import { apiURL } from "./constant/api.js";
 
 async function fetchApi() {
   try {
-    const response = await fetch(url);
+    const response = await fetch(apiURL);
     const data = await response.json();
 
     createProduct(data);
