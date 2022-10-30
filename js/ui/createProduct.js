@@ -22,7 +22,7 @@ export default function createProduct(data) {
                                   <h4>${data[i].title}</h4>
                                   
                                     <p>Price: <b>${data[i].price}</b></p>  
-                                    <i class="${cssFavorite} fa-heart"></i>
+                                    <i class="${cssFavorite} fa-heart" data-id="${i}"></i>
                                                         
                             </div>`;
   }

@@ -5,5 +5,5 @@ export default function infoMessage(htmlClass, displayMessage) {
                     <div class="info-message ${htmlClass}">
                         ${displayMessage}
                     </div>
-    `;
+                    `;
 }

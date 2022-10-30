@@ -1,13 +1,18 @@
 import getFav from "./getFav.js";
 import infoMessage from "../constant/infoMessage.js";
-import createProduct from "./createProduct.js";
 
+const element = document.querySelector(".container");
 const favorites = getFav();
 
 if (favorites.length === 0) {
-  infoMessage("no-favs", "You currently don´t have any favorites");
+  infoMessage("no-favs", "You currently donnt have any favorites");
 }
 
 favorites.forEach((item) => {
-  createProduct(item);
+  element.innerHTML += `  <div class="result">
+
+      <i class="fa-regular fa-heart"></i>
+      ${item.id}
+                          
+</div>`;
 });
