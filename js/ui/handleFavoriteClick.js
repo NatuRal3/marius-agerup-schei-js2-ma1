@@ -2,8 +2,8 @@ import getFav from "./getFav.js";
 import saveFav from "./saveFav.js";
 
 export default function handleFavoriteClick() {
-  this.classList.toggle("fa-regular fa-heart");
-  this.classList.toggle("fa-solid fa-heart");
+  this.classList.toggle("fa-regular");
+  this.classList.toggle("fa-solid");
 
   const id = this.dataset.id;
   const fav = getFav();
