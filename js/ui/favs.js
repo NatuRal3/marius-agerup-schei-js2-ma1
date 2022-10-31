@@ -3,9 +3,10 @@ import infoMessage from "../constant/infoMessage.js";
 
 const element = document.querySelector(".container");
 const favorites = getFav();
+element.innerHTML = "";
 
 if (favorites.length === 0) {
-  infoMessage("no-favs", "You currently donnt have any favorites");
+  infoMessage("no-favs", "You currently dont have any favorites");
 }
 
 favorites.forEach((item) => {

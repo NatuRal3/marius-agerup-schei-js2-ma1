@@ -11,7 +11,6 @@ export async function fetchApi() {
     createProduct(data);
     searchProducts(data);
   } catch (error) {
-    console.log(error);
     infoMessage("error", " Failed to get you the data. We are on it.");
   }
 }

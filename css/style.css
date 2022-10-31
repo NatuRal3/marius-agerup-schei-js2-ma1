@@ -1,19 +1,16 @@
+html,body {height: 100%; margin: 0; padding: 0px;}
+html > * {font-family: "Roboto Slab", serif;}
+a:hover,a:link,a:visited {text-decoration: none; color: rgb(255, 255, 255);}
+a {font-size: 1.1rem; text-transform: uppercase;}
 
-html,body {height: 100%;}
+h1 {text-align: center;}
 
-body {
-    display: flex; 
-    flex-direction: column;
-    margin: 0px;
-    height: 100%;
-    background-color: #333;
-}
+nav{display: flex;flex-direction: row;justify-content: center;}
+nav a{padding: 10px;}
+.navActive {color: rgb(24, 217, 152) !important;}
 
-.search{
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-}
+body {display: flex; flex-direction: column; margin: 0px; height: 100%; background-color: #333;}
+.search{margin-top: 20px; display: flex; justify-content: center;}
 
 .container{
     height: 100%;
@@ -28,19 +25,19 @@ body {
 .result{
     padding: 5px;
     margin: 5px;
+    border-radius: 7px;
     width: 200px;
     min-height: 200px;
     color: #333;
     background-color: azure;
 }
 
-/* Product Favorites */
-
 
 /*information Messages*/
 .info-message{
     border: 1px solid;
     padding: 15px;
+    font-size: 2.5rem;
 }
 
 .info-message.error{
@@ -50,23 +47,21 @@ body {
     max-width: 800px;
 }
 
-/*Loader*/
-.loading-bar {
-    display: inline-block;
-    width: 80px;
-    height: 80px;
-    margin-left: 50%;
+.info-message.no-favs{
+    border-color: yellow;
+
 }
+
+/*Loader*/
 
 .loading-bar:after {
     content: " ";
     display: block;
-    width: 64px;
-    height: 64px;
-    margin: 8px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
-    border: 6px solid #333;
-    border-color: #333 transparent #333 transparent;
+    border: 6px solid rgb(213, 210, 34);
+    border-color: rgb(218, 48, 48) transparent rgb(143, 31, 31) transparent;
     animation: loading 1.2s linear infinite;
 }
 
